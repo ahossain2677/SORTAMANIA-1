@@ -16,12 +16,34 @@ public class Team14SortingCompetition {
 		}
 		return (list[list.length/2] + list[(list.length/2)-1])/2;
 	}
-	
+	public static int ChallangeTwo(String[] list, String theString)
+	{
+		bubbleSort(list);
+		for(int i = 0; i < list.length; i++)
+		{
+			if(list[i].compareTo(theString) == 0)
+			{
+				return i;
+			}
+		}
+		return -1;
+	}
 	public static void bubbleSort(int[]list1) {
 		for(int i = 0; i < list1.length-1; i++) {
 			for(int j = i+1; j < list1.length; j++) {
 				if(list1[i] > list1[j]) {
 					int temp = list1[j];
+					list1[j] = list1[i];
+					list1[i] = temp;
+				}
+			}
+		}
+	}
+	public static void bubbleSort(String[]list1) {
+		for(int i = 0; i < list1.length-1; i++) {
+			for(int j = i+1; j < list1.length; j++) {
+				if(list1[i].compareTo(list1[j]) < 0) {
+					String temp = list1[j];
 					list1[j] = list1[i];
 					list1[i] = temp;
 				}
