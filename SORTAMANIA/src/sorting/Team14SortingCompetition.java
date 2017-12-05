@@ -1,13 +1,17 @@
 package sorting;
 import java.util.Random;
+import java.util.Arrays;
 public class Team14SortingCompetition {
 
 	public static void main(String[]args) {
 		int[] list = new int[10000];
-		generateNum(list);
+		int[][] list2 = new int[1000][1000];
+		generateNum(list2);
+		//generateNum(list);
 		bubbleSort(list);
-		printIntArray(list);
-		System.out.println(ChallangeOne(list));
+		//printIntArray(list);
+		//System.out.println(ChallangeOne(list));
+		//System.out.println(Arrays.deepToString(list2));
 	}
 	public static int ChallangeOne(int[] list) {
 		//bubbleSort(list);
@@ -27,6 +31,14 @@ public class Team14SortingCompetition {
 			}
 		}
 		return -1;
+	}
+	
+	public static int ChallengeFour(int[][] arr) {
+		for(int i = 0; i < arr.length; i++) {
+			for(int j = 0; j < arr[i].length; j++) {
+				
+			}
+		}
 	}
 	public static void bubbleSort(int[]list1) {
 		for(int i = 0; i < list1.length-1; i++) {
@@ -64,6 +76,17 @@ public class Team14SortingCompetition {
 			int  n = rand.nextInt(10000) + 1;
 			list[i] = n;
 		}
+	}
+	
+	public static void generateNum(int[][]list) {
+		for(int i = 0; i < list.length; i++) {
+			for(int j = 0; j <list[i].length; j++) {
+				Random rand = new Random();
+				int  n = rand.nextInt(10000) + 1;
+				list[i][j] = n;
+			}
+		}
+		System.out.println("finished");
 	}
 }
 
