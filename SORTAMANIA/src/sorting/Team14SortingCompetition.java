@@ -86,7 +86,7 @@ public class Team14SortingCompetition {
 				list[i][j] = n;
 			}
 		}
-		System.out.println("finished");
+		//System.out.println("finished");
 	}
 }
 
