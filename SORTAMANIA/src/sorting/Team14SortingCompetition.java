@@ -1,6 +1,6 @@
 package sorting;
 import java.util.Random;
-public class TeamSortingCompetition {
+public class Team14SortingCompetition {
 
 	public static void main(String[]args) {
 		int[] list = new int[10000];
